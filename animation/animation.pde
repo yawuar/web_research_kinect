@@ -34,7 +34,6 @@ void setup() {
 void draw() {
   background(0);
   noFill();
-  //noStroke();
   strokeWeight(3);
   opencv.loadImage(kinect.getBodyTrackImage());
   
@@ -71,7 +70,7 @@ void showCircles(ArrayList<Contour> contours) {
         boolean outside = inContour(x, y, contour);
         noStroke();
         // change to false to check outside animation
-        if(outside) {
+        if(!outside) {
           noFill();
           ellipse(x, y, size, size);
         } else {

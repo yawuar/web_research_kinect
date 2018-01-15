@@ -17,6 +17,7 @@ De volgende links die ik heb gedeeld zijn o.a. de repo die ik heb gebruikt voor 
     https://opencv.org/
     https://github.com/shiffman/OpenKinect-for-Processing
     http://interactivemechanics.com/news/2015/10/kinect-with-processing/
+    https://www.youtube.com/watch?v=QmVNgdapJJM&list=PLRqwX-V7Uu6ZMlWHdcy8hAGDy6IaoxUKf
 
 ## Presentation
 
