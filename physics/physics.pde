@@ -12,8 +12,8 @@ float polygonFactor = 1;
 int threshold = 5;
 
 //Distance in cm
-int maxD = 1000; //4.5m
-int minD = 100; //50cm
+int maxD = 1000; //10m
+int minD = 100; //200cm
 
 int depthWidth = 512;
 int depthHeight = 424;
@@ -67,17 +67,14 @@ void draw() {
 }
 
 void showAnimation(ArrayList<Contour> contours) {
-  float size = random(10, 50);
   noStroke();
   if (contours.size() > 0) {
     for (Contour contour : contours) {
       contour.setPolygonApproximationFactor(polygonFactor);
       if (contour.numPoints() > 50) {
-        boolean inside = inContour(width / 2, height / 2, contour);
         for (int i = 0; i < drops.length; i++) {
           boolean outside = inContour(drops[i].getX() , drops[i].getY() + 20, contour);
           if(!outside) {
-            println("OUTCH");
             drops[i].fall();
             drops[i].small();
           } else {
